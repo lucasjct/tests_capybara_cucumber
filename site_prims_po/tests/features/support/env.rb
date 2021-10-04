@@ -18,7 +18,7 @@ if BROWSER.eql?('chrome')
 
 elsif BROWSER.eql?('chrome_headless')
   Capybara::Selenium::Driver.new(app,:browser => :chrome,desired_capabilities:Selenium::WebDriver::Remote::Capabilities.chrome(
-   "goog:chromeOptions" => {'args' =>['--headless', 'disable-gpu',"window-size=1000,800" ]}
+   "goog:chromeOptions" => {'args' =>['--headless', 'disable-gpu','disable-gpu', '--disable-dev-shm-usage', '--no-sandbox' ]}
   )
 )
 elsif BROWSER.eql?('firefox')
