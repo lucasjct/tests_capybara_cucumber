@@ -21,6 +21,14 @@ elsif BROWSER.eql?('chrome_headless')
    "goog:chromeOptions" => {'args' =>['--headless', 'disable-gpu','disable-gpu', '--disable-dev-shm-usage', '--no-sandbox' ]}
   )
 )
+elsif BROWSER.eql?('remote')
+  Capybara.register_driver :selenium_chrome do |app|
+    Capybara::Selenium::Driver.new(app,
+      :browser => :remote,
+      :desired_capabilities => :chrome,
+      :url => "http://selenium-hub:4444/wd/hub"
+    )
+  end
 elsif BROWSER.eql?('firefox')
   Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette => true)
 
