@@ -1,6 +1,5 @@
 ---  
-
-default: --profile progress -p homolog --publish -p chrome_headless
+default: --no-source --color --format pretty
 
 pretty: --format pretty
 progress: --format progress
@@ -10,3 +9,4 @@ chrome: BROWSER=chrome
 firefox: BROWSER=firefox
 chrome_headless: BROWSER=chrome_headless
 firefox_headless: BROWSER=firefox_headless
+remote: BROWSER=remote
