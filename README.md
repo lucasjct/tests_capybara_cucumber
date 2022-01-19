@@ -1,6 +1,6 @@
 # capybara, cucumber e site_prism  
 
-Neste projeto temos três gems que são voltadas para testes automatizado.  
+Neste projeto temos três gems que auxiliam testes automatizados.  
 
 1. [__Cucumber__](./cucumber)    
 *** 
